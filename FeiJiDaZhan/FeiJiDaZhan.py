@@ -267,7 +267,7 @@ class HeroPlane(BasePlane):
     #开火
     def fire(self):
         global plane_maximum_bullet
-        hero_fire_music.play()
+        # hero_fire_music.play()
         if not self.is_three_bullet:
             if len(self.bullet_list) < plane_maximum_bullet[self.plane_type]:#单发炮台子弹限制为8
                 self.bullet_list.append(Bullet(self.screen, self.x+40, self.y-14, self))
@@ -906,7 +906,7 @@ def main():
     #3. 创建一个飞机对象
     hero = HeroPlane(window_screen)
     #4. 导入背景音乐
-    background_music_load()
+    # background_music_load()
     #标题
     pygame.display.set_caption('飞机大战')
     while True:
